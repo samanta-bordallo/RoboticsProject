@@ -1,39 +1,49 @@
 @charset "UTF-8";
  
- .top-menu {
-  background-color: #333; /* Cor de fundo do menu */
-  padding: 10px 0; /* Espaçamento interno do menu */
+.text-center {
+  text-align: center;
+}
+
+.top-menu {
+  position: fixed; /* Torna o cabeçalho fixo no topo */
+  top: 0; /* Define a posição no topo da página */
+  left: 0; /* Define a posição à esquerda */
+  width: 100%; /* Define a largura total */
+  background-color: #333;
+  padding: 10px 0;
+  z-index: 1000; /* Garante que o cabeçalho esteja acima de outros elementos */
 }
 
 .top-menu ul {
-  list-style-type: none; /* Remove os estilos padrão da lista */
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  text-align: center; /* Alinha os itens do menu ao centro */
+  text-align: center;
 }
 
 .top-menu li {
-  display: inline; /* Exibe os itens do menu em linha */
-  margin-right: 20px; /* Espaçamento entre os itens do menu */
+  display: inline;
+  margin-right: 20px;
 }
 
 .top-menu li:last-child {
-  margin-right: 0; /* Remove o espaçamento do último item do menu */
+  margin-right: 0;
 }
 
 .top-menu a {
-  color: #fff; /* Cor do texto do menu */
-  text-decoration: none; /* Remove a decoração de link padrão */
-  font-weight: bold; /* Define a espessura da fonte */
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 
- .App {
-  background-image: url('assets/theme/pexels-pavel-danilyuk-8294624.jpg');
+.App {
+  background-image: url('assets/theme/abstract-robot-thinking-800x450.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh; /* Isso define a altura da imagem como 100% da altura da tela */
 }
+
 
 /* Adicione os estilos para a classe content */
 .content {
@@ -51,7 +61,7 @@
 /* Estilos para o botão */
 .create-tutorial-btn {
   background-color: yellow;
-  color: white;
+  color: black;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -64,7 +74,20 @@
   text-decoration: none;
 }
 
-/* Adicione estas classes ao seu arquivo styles.css */
+/* Estilos para o menu de hambúrguer */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.bar {
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  margin: 5px 0;
+  text-align: right;
+}
 
 /* Estilos para a seção "Sobre" */
 .about-section {
@@ -78,6 +101,37 @@
 .about-section .section-subheading {
   margin-bottom: 75px;
 }
+
+/* Estilos para a seção "Sobre" */
+.about-section {
+  padding: 100px 0;
+}
+
+.about-section .section-heading {
+  margin-bottom: 30px;
+}
+
+.about-section .section-subheading {
+  margin-bottom: 75px;
+}
+
+.about-section .row {
+  margin-top: 50px;
+}
+
+.about-section .col-md-4 {
+  margin-bottom: 50px;
+}
+
+.about-section h4 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.about-section p {
+  font-size: 16px;
+}
+
 
 /* Estilos para a seção "Tutoriais" */
 .tutorial-section {
@@ -153,6 +207,36 @@
   font-size: 1em;
 }
 
+/* Estilos para telas menores */
+@media only screen and (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-items {
+    display: none;
+    position: absolute;
+    top: 100%; /* Posiciona o menu abaixo do botão */
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+  }
+
+  .menu-items.show {
+    display: block;
+  }
+
+  .menu-items.show li {
+    margin-bottom: 10px; /* Espaçamento entre os itens do menu */
+  }
+
+  /* Ajuste para exibir os itens verticalmente */
+  .menu-items.show li {
+    display: block;
+    text-align: left; /* Alinha os itens a esquerda */
+  }
+}
 
 :root {
   --bs-blue: #0d6efd;
