@@ -10,26 +10,14 @@ const AboutSection: React.FC = () => {
         </div>
         <div className="row">
           <div className="col-md-4">
-            <span className="fa-stack fa-4x">
-              <i className="fas fa-circle fa-stack-2x text-primary"></i>
-              <i className="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-            </span>
             <h4 className="my-3">O site</h4>
             <p className="text-muted">O site está a ser criado para servir como avaliação final do curso TETP Sistemas de Informação que a desenvolvedora está a fazer no IEFP.</p>
           </div>
           <div className="col-md-4">
-            <span className="fa-stack fa-4x">
-              <i className="fas fa-circle fa-stack-2x text-primary"></i>
-              <i className="fas fa-laptop fa-stack-1x fa-inverse"></i>
-            </span>
             <h4 className="my-3">O robô</h4>
             <p className="text-muted">A ideia de criar um robô ficou em segundo plano, mas não deixou de existir! Logo ele estará a ser construído.</p>
           </div>
           <div className="col-md-4">
-            <span className="fa-stack fa-4x">
-              <i className="fas fa-circle fa-stack-2x text-primary"></i>
-              <i className="fas fa-lock fa-stack-1x fa-inverse"></i>
-            </span>
             <h4 className="my-3">A desenvolvedora</h4>
             <p className="text-muted">A desenvolvedora chama-se Samanta Bordallo, tem 27 anos, é bióloga e perita criminal, mas resolver entrar na área da programação em 2022 e hoje ela está a finalizar o curso TETP Sistemas de Informação de nível 5.</p>
           </div>
