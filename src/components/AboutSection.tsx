@@ -11,7 +11,7 @@ const AboutSection: React.FC = () => {
         <div className="row">
           <div className="col-md-4">
             <h4 className="my-3">O site</h4>
-            <p className="text-muted">O site está a ser criado para servir como avaliação final do curso TETP Sistemas de Informação que a desenvolvedora está a fazer no IEFP.</p>
+            <p className="text-muted">O site está a ser criado para servir como avaliação final das matérias cliente-side e server-side do curso TETP Sistemas de Informação que a desenvolvedora está a fazer no IEFP.</p>
           </div>
           <div className="col-md-4">
             <h4 className="my-3">O robô</h4>
@@ -19,7 +19,7 @@ const AboutSection: React.FC = () => {
           </div>
           <div className="col-md-4">
             <h4 className="my-3">A desenvolvedora</h4>
-            <p className="text-muted">A desenvolvedora chama-se Samanta Bordallo, tem 27 anos, é bióloga e perita criminal, mas resolver entrar na área da programação em 2022 e hoje ela está a finalizar o curso TETP Sistemas de Informação de nível 5.</p>
+            <p className="text-muted">A desenvolvedora chama-se Samanta Bordallo, tem 27 anos, é bióloga e perita criminal, mas resolveu entrar na área da programação em 2022 e hoje ela está a finalizar o curso TETP Sistemas de Informação de nível 5.</p>
           </div>
         </div>
       </div>
