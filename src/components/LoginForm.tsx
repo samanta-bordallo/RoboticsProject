@@ -1,58 +1,40 @@
-// LoginForm.tsx
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import '../styles.css';
 
 const LoginForm: React.FC = () => {
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-  });
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
-  const navigate = useNavigate();
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Aqui você pode enviar os dados do formulário para o backend
-    console.log(formData);
-    // Redirecione o usuário após o login bem-sucedido
-    navigate('/');
+  const handleLogin = (event: React.FormEvent) => {
+    event.preventDefault();
+    // Lógica de login
+    console.log('Username:', username, 'Password:', password);
   };
 
   return (
-    <div className="login-container">
-      <form onSubmit={handleSubmit} className="login-form">
-        <h2>Login</h2>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
+    <section className="page-section" id="loginform">
+      <form onSubmit={handleLogin}>
+        <div>
+          <label htmlFor="username">Nome:</label>
           <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleChange}
-            required
+            type="text"
+            id="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Password:</label>
+        <div>
+          <label htmlFor="password">Senha:</label>
           <input
             type="password"
-            name="password"
-            placeholder="Password"
-            value={formData.password}
-            onChange={handleChange}
-            required
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit" className="login-btn">Login</button>
+        <button type="submit">Login</button>
       </form>
-    </div>
+    </section>
   );
 };
 

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles.css';
 
-const AboutSection: React.FC = () => {
+const Home: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
@@ -21,7 +22,9 @@ const AboutSection: React.FC = () => {
           <li><a href="#about">Sobre</a></li>
           <li><a href="#tutoriais">Tutoriais</a></li>
           <li><a href="#crieoseu">Crie o seu</a></li>
-          <li><a href="#contacto">Contato</a></li>
+          <li><a href="#contacto" className="spacing">Contato</a></li>
+          <li><Link to="/login">Entrar</Link></li>
+          <li><a href="#registerform">Registar</a></li>
         </ul>
       </nav>
       <div className="content">
@@ -36,4 +39,4 @@ const AboutSection: React.FC = () => {
   );
 }
 
-export default AboutSection;
+export default Home;

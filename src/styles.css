@@ -2,6 +2,7 @@
  
 .text-center {
   text-align: center;
+  padding: 50px;
 }
 
 .top-menu {
@@ -23,7 +24,7 @@
 
 .top-menu li {
   display: inline;
-  margin-right: 20px;
+  margin-right: 40px;
 }
 
 .top-menu li:last-child {
@@ -36,6 +37,39 @@
   font-weight: bold;
 }
 
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #007bff; /* Cor de fundo */
+  color: #fff; /* Cor do ícone */
+  border-radius: 50%; /* Borda circular */
+  margin-right: 10px; /* Espaçamento entre os ícones */
+  transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+}
+
+.social-icon:hover {
+  background-color: #0056b3; /* Altera a cor de fundo ao passar o mouse */
+}
+
+/* Estilos específicos para cada rede social */
+.email {
+  background-color: #dc3545; /* Cor de fundo para o ícone de e-mail */
+}
+
+.whatsapp {
+  background-color: #25d366; /* Cor de fundo para o ícone do WhatsApp */
+}
+
+.linkedin {
+  background-color: #0077b5; /* Cor de fundo para o ícone do LinkedIn */
+}
+
+.github {
+  background-color: #333; /* Cor de fundo para o ícone do GitHub */
+}
 
 .App {
   background-image: url('assets/theme/abstract-robot-thinking-800x450.jpg');
@@ -99,20 +133,7 @@
 }
 
 .about-section .section-subheading {
-  margin-bottom: 75px;
-}
-
-/* Estilos para a seção "Sobre" */
-.about-section {
-  padding: 100px 0;
-}
-
-.about-section .section-heading {
-  margin-bottom: 30px;
-}
-
-.about-section .section-subheading {
-  margin-bottom: 75px;
+  margin-bottom: 750px;
 }
 
 .about-section .row {
@@ -143,7 +164,7 @@
 }
 
 .tutorial-section .section-subheading {
-  margin-bottom: 75px;
+  margin-bottom: 750px;
 }
 
 .tutorial-section .tutorial-item {
@@ -269,23 +290,30 @@
   margin: 1rem 0 0;
 }
 
-/* css para login */
-.login-container {
+/* Adicione estilos para a página de login */
+.login-page {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  padding: 20px;
 }
 
-.login-form {
-  background-color: #f7f7f7;
-  padding: 2rem;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.login-page h2 {
+  margin-bottom: 20px;
 }
 
-.login-form h2 {
-  margin-bottom: 1rem;
+.login-page form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -318,7 +346,9 @@
   background-color: #0056b3;
 }
 
-
+.spacing {
+  margin-right: 200px; 
+}
 
 
 
